@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon"  href="./Icon/catApp.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cat App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/main.js" defer></script>
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="header-title">
+        <h1 id="title">The Cats App</h1>
+      </div>
+      <div class="header-items">
+        <div class="header-item1">
+          <div class="label-facts">
+            <label for="facts" id="cat-facts"
+              >Number of cats facts (50 Maximum)</label
+            >
+          </div>
+          <div class="form-facts">
+            <form action="">
+              <input
+                type="number"
+                id="facts"
+                placeholder="number of cat facts (50 max)"
+              />
+              <button type="button" id="btn-submit1">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="header-item2">
+          <div class="label-photos">
+            <label for="number" id="cat-photos"
+              >Number of cats photos (10 Max)</label
+            >
+          </div>
+          <div class="form-number">
+            <form action="">
+              <input
+                type="number"
+                id="number"
+                placeholder="number of cat photos (10 max)"
+              />
+              <button type="button" id="btn-submit2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outcome"></div>
+  </body>
+</html>
