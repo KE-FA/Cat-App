@@ -1,4 +1,6 @@
-import axios from "axios";
+// import axios from "axios";
+import { default as axios } from 'axios';
+
 
 const facts = document.querySelector("#facts");
 const photos = document.querySelector("#number");
