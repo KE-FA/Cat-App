@@ -1,5 +1,6 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/esm/axios.min.js';
 // import axios from "axios";
-import { default as axios } from 'axios';
+// import { default as axios } from 'axios';
 
 
 const facts = document.querySelector("#facts");
