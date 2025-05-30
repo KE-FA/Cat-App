@@ -1,17 +1,18 @@
-import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/esm/axios.min.js';
+import axios from "https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/esm/axios.min.js";
 // import axios from "axios";
 // import { default as axios } from 'axios';
-
 
 const facts = document.querySelector("#facts");
 const photos = document.querySelector("#number");
 const btnSubmit1 = document.querySelector("#btn-submit1");
 const btnSubmit2 = document.querySelector("#btn-submit2");
 const result = document.querySelector(".outcome");
-
+const loader = document.querySelector(".loader-section");
 
 btnSubmit1.addEventListener("click", async (e) => {
   const randomPhotos = facts.value;
+  loader.style.display = "flex";
+
   if (randomPhotos === "") {
     result.textContent = "Please provide a suitable number";
     return;
@@ -36,6 +37,7 @@ btnSubmit1.addEventListener("click", async (e) => {
     } catch (error) {
       result.textContent = "Error fetching cat fact";
     }
+    loader.style.display = "none";
   } else {
     result.textContent = "The Number should be less than or equal to 50";
   }
@@ -43,6 +45,8 @@ btnSubmit1.addEventListener("click", async (e) => {
 
 btnSubmit2.addEventListener("click", async (e) => {
   const randomPhotos = photos.value;
+  loader.style.display = "flex";
+
   if (randomPhotos === "") {
     result.textContent = "Please provide a suitable number";
     return;
@@ -65,6 +69,7 @@ btnSubmit2.addEventListener("click", async (e) => {
     } catch (error) {
       result.textContent = "Error fetching cat fact";
     }
+    loader.style.display = "none";
   } else {
     result.textContent = "The Image should be less than or equal to 10";
   }
